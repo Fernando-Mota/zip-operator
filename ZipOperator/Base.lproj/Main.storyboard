@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,58 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ZipOperator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="QXx-Mn-zPD">
+                                <rect key="frame" x="0.0" y="20" width="320" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="bM0-Sa-kZY"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="eTl-ft-CKO">
+                                <rect key="frame" x="0.0" y="76" width="320" height="420"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nt7-4c-rWE">
+                                <rect key="frame" x="0.0" y="496" width="320" height="72"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="72" id="guq-LF-P1h"/>
+                                </constraints>
+                                <state key="normal" title="Limpar"/>
+                                <connections>
+                                    <action selector="clear:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BG6-rU-Vhe"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="eTl-ft-CKO" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="8d3-Xn-Jz8"/>
+                            <constraint firstItem="eTl-ft-CKO" firstAttribute="top" secondItem="QXx-Mn-zPD" secondAttribute="bottom" id="DS3-43-Jbb"/>
+                            <constraint firstItem="eTl-ft-CKO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Dph-aL-SgS"/>
+                            <constraint firstItem="nt7-4c-rWE" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="KKJ-J1-BkS"/>
+                            <constraint firstItem="QXx-Mn-zPD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Pa8-nU-y60"/>
+                            <constraint firstItem="QXx-Mn-zPD" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="UhK-cG-0lP"/>
+                            <constraint firstItem="QXx-Mn-zPD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Zoe-SB-tZA"/>
+                            <constraint firstItem="nt7-4c-rWE" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="m0a-t6-heW"/>
+                            <constraint firstItem="nt7-4c-rWE" firstAttribute="top" secondItem="eTl-ft-CKO" secondAttribute="bottom" id="r2l-PK-eCL"/>
+                            <constraint firstItem="nt7-4c-rWE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="rGA-Jf-fmn"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="search" destination="QXx-Mn-zPD" id="aTf-iz-sUp"/>
+                        <outlet property="textView" destination="eTl-ft-CKO" id="eIv-PW-mQa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="116.25" y="102.46478873239437"/>
         </scene>
     </scenes>
 </document>

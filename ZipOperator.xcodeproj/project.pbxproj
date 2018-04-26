@@ -13,6 +13,14 @@
 		6C346145208E94E300B70E4D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C346144208E94E300B70E4D /* Assets.xcassets */; };
 		6C346148208E94E300B70E4D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C346146208E94E300B70E4D /* LaunchScreen.storyboard */; };
 		B0A921581B748F0E32B77AB1 /* Pods_ZipOperator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF6C841F9D6F1022874F8829 /* Pods_ZipOperator.framework */; };
+		ED6C229220915BCE0072F19F /* DB.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6C229120915BCE0072F19F /* DB.swift */; };
+		ED6C229820915C4A0072F19F /* FriendRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6C229720915C4A0072F19F /* FriendRepository.swift */; };
+		ED6C229A20915C5A0072F19F /* PersonRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6C229920915C5A0072F19F /* PersonRepository.swift */; };
+		ED6C229D20915C6E0072F19F /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6C229C20915C6E0072F19F /* Person.swift */; };
+		ED6C229F20915C820072F19F /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6C229E20915C820072F19F /* Friend.swift */; };
+		ED6C22A320915FAF0072F19F /* Pessoa.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6C22A220915FAF0072F19F /* Pessoa.swift */; };
+		ED6C22A520915FBC0072F19F /* Amigo.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6C22A420915FBC0072F19F /* Amigo.swift */; };
+		ED6C22A82091687F0072F19F /* PersonUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6C22A72091687F0072F19F /* PersonUseCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +33,14 @@
 		6C346149208E94E300B70E4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		85D8D1AF9B323423CE77A006 /* Pods-ZipOperator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZipOperator.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZipOperator/Pods-ZipOperator.release.xcconfig"; sourceTree = "<group>"; };
 		B4457CDB1C3F6692655D69C9 /* Pods-ZipOperator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZipOperator.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZipOperator/Pods-ZipOperator.debug.xcconfig"; sourceTree = "<group>"; };
+		ED6C229120915BCE0072F19F /* DB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DB.swift; sourceTree = "<group>"; };
+		ED6C229720915C4A0072F19F /* FriendRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendRepository.swift; sourceTree = "<group>"; };
+		ED6C229920915C5A0072F19F /* PersonRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonRepository.swift; sourceTree = "<group>"; };
+		ED6C229C20915C6E0072F19F /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		ED6C229E20915C820072F19F /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
+		ED6C22A220915FAF0072F19F /* Pessoa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pessoa.swift; sourceTree = "<group>"; };
+		ED6C22A420915FBC0072F19F /* Amigo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Amigo.swift; sourceTree = "<group>"; };
+		ED6C22A72091687F0072F19F /* PersonUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonUseCase.swift; sourceTree = "<group>"; };
 		EF6C841F9D6F1022874F8829 /* Pods_ZipOperator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZipOperator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -70,6 +86,9 @@
 		6C34613C208E94E300B70E4D /* ZipOperator */ = {
 			isa = PBXGroup;
 			children = (
+				ED6C22A6209168510072F19F /* UseCases */,
+				ED6C229B20915C5F0072F19F /* Models */,
+				ED6C229020915BB60072F19F /* Repositories */,
 				6C34613D208E94E300B70E4D /* AppDelegate.swift */,
 				6C34613F208E94E300B70E4D /* ViewController.swift */,
 				6C346141208E94E300B70E4D /* Main.storyboard */,
@@ -86,6 +105,43 @@
 				EF6C841F9D6F1022874F8829 /* Pods_ZipOperator.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ED6C229020915BB60072F19F /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				ED6C229120915BCE0072F19F /* DB.swift */,
+				ED6C229720915C4A0072F19F /* FriendRepository.swift */,
+				ED6C229920915C5A0072F19F /* PersonRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		ED6C229B20915C5F0072F19F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				ED6C22A020915EAE0072F19F /* DBmodels */,
+				ED6C22A220915FAF0072F19F /* Pessoa.swift */,
+				ED6C22A420915FBC0072F19F /* Amigo.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		ED6C22A020915EAE0072F19F /* DBmodels */ = {
+			isa = PBXGroup;
+			children = (
+				ED6C229C20915C6E0072F19F /* Person.swift */,
+				ED6C229E20915C820072F19F /* Friend.swift */,
+			);
+			path = DBmodels;
+			sourceTree = "<group>";
+		};
+		ED6C22A6209168510072F19F /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				ED6C22A72091687F0072F19F /* PersonUseCase.swift */,
+			);
+			path = UseCases;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,8 +275,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED6C229D20915C6E0072F19F /* Person.swift in Sources */,
+				ED6C229F20915C820072F19F /* Friend.swift in Sources */,
+				ED6C22A82091687F0072F19F /* PersonUseCase.swift in Sources */,
+				ED6C22A320915FAF0072F19F /* Pessoa.swift in Sources */,
+				ED6C22A520915FBC0072F19F /* Amigo.swift in Sources */,
 				6C346140208E94E300B70E4D /* ViewController.swift in Sources */,
+				ED6C229820915C4A0072F19F /* FriendRepository.swift in Sources */,
 				6C34613E208E94E300B70E4D /* AppDelegate.swift in Sources */,
+				ED6C229220915BCE0072F19F /* DB.swift in Sources */,
+				ED6C229A20915C5A0072F19F /* PersonRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
